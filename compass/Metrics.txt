@@ -1,0 +1,15 @@
+Metrics;
+School fees collected per class and balances per class
+Perfomance per subject
+
+Student numbers per class
+Demographics
+
+Number of students
+
+
+
+School fees collected per class and balances per class
+Perfomance per subject
+ Absenteeism rates per class
+ Scores per subject over time  
