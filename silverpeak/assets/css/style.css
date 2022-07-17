@@ -699,7 +699,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# Whu Us
+# Why Us
 --------------------------------------------------------------*/
 .why-us .box {
   padding: 50px 30px;
@@ -733,6 +733,84 @@ section {
 }
 .why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Rooms
+--------------------------------------------------------------*/
+.rooms {
+  background: url(../img/rooms-bg.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.rooms::before {
+  content: "";
+  background-color: rgba(12, 11, 10, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.rooms .section-title h2 {
+  color: #fff;
+}
+.rooms .container {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .rooms {
+    background-attachment: fixed;
+  }
+}
+.rooms .rooms-carousel {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+}
+.rooms .rooms-item {
+  color: #fff;
+}
+.rooms .rooms-item h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #ffb03b;
+}
+.rooms .rooms-item .price {
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.rooms .rooms-item .price span {
+  border-bottom: 2px solid #ffb03b;
+}
+.rooms .rooms-item ul {
+  list-style: none;
+  padding: 0;
+}
+.rooms .rooms-item ul li {
+  padding-bottom: 10px;
+}
+.rooms .rooms-item ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #ffb03b;
+}
+.rooms .rooms-item p:last-child {
+  margin-bottom: 0;
+}
+.rooms .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.rooms .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+.rooms .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffb03b;
 }
 
 /*--------------------------------------------------------------
