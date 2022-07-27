@@ -1,6 +1,6 @@
 /**
-* Template Name: Anyar - v4.8.0
-* Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
+* Template Name: Vesperr - v4.8.0
+* Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -67,8 +67,8 @@
     let header = select('#header')
     let offset = header.offsetHeight
 
-    if (!header.classList.contains('fixed-top')) {
-      offset += 70
+    if (!header.classList.contains('header-scrolled')) {
+      offset -= 20
     }
 
     let elementPos = select(el).offsetTop
@@ -79,22 +79,15 @@
   }
 
   /**
-   * Header fixed top on scroll
+   * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
-  let selectTopbar = select('#topbar')
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.add('topbar-scrolled')
-        }
       } else {
         selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.remove('topbar-scrolled')
-        }
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -166,20 +159,10 @@
   });
 
   /**
-   * Preloader
+   * Testimonials slider
    */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
-
-  /**
-   * Clients Slider
-   */
-  new Swiper('.clients-slider', {
-    speed: 400,
+  new Swiper('.testimonials-slider', {
+    speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -193,20 +176,13 @@
     },
     breakpoints: {
       320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
         slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
+        spaceBetween: 20
       }
     }
   });
@@ -247,13 +223,6 @@
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate glightbox 
-   */
-  const gLightbox = GLightbox({
-    selector: '.glightbox'
   });
 
   /**
